@@ -12,7 +12,7 @@
           "informationUri": "https://www.glog.ai",
           "rules": [
             {
-              "id": "glog-9cbafb99-d925-4786-9144-a8dd1a68fa60",
+              "id": "glog-8ddaed16-3680-4f4f-834a-1a8f24a26991",
               "help": {
                 "text": ""
               },
@@ -23,7 +23,7 @@
               }
             },
             {
-              "id": "glog-18f679ff-ca63-4b6b-905a-e3ddafa83443",
+              "id": "glog-6534de49-40ea-45e6-9680-d72e4ce0c77c",
               "help": {
                 "text": ""
               },
@@ -34,7 +34,7 @@
               }
             },
             {
-              "id": "glog-850f9eea-cc8e-43eb-8931-3c14574d0589",
+              "id": "glog-db2e2327-3d36-4387-8df2-db6942f98069",
               "help": {
                 "text": ""
               },
@@ -45,7 +45,7 @@
               }
             },
             {
-              "id": "glog-55986e2e-738e-4f6f-b4af-5a5b38c9271d",
+              "id": "glog-3fd4330a-0558-4c67-8f2a-cc65be76eae2",
               "help": {
                 "text": ""
               },
@@ -56,7 +56,7 @@
               }
             },
             {
-              "id": "glog-dbcfb02d-c681-422d-a2ef-f320ede0a1e7",
+              "id": "glog-4a8d2f16-aa28-49a4-ab59-a29ff912be47",
               "help": {
                 "text": ""
               },
@@ -67,7 +67,7 @@
               }
             },
             {
-              "id": "glog-a6de4a95-eab2-4557-b7b1-e61a61ed26be",
+              "id": "glog-1870c8e1-2346-4727-bbb6-fa3d831af7b2",
               "help": {
                 "text": ""
               },
@@ -78,7 +78,7 @@
               }
             },
             {
-              "id": "glog-9f7bbfcc-ee9b-419e-a94f-8a2cb94116fa",
+              "id": "glog-f627a678-aa62-4db9-9624-9ab0d2da0f41",
               "help": {
                 "text": ""
               },
@@ -89,7 +89,7 @@
               }
             },
             {
-              "id": "glog-2db1852e-3386-4620-8973-4a70baf3da17",
+              "id": "glog-47950733-2b86-4aa6-9928-0dbbf4b0df6e",
               "help": {
                 "text": ""
               },
@@ -100,7 +100,18 @@
               }
             },
             {
-              "id": "glog-c54000e1-149f-45f9-a2c0-73a1e8c7bcdb",
+              "id": "glog-f1e244a7-93a9-456b-b119-9ed859d79777",
+              "help": {
+                "text": ""
+              },
+              "properties": {
+                "tags": [
+                  "DS121708"
+                ]
+              }
+            },
+            {
+              "id": "glog-e5645369-0346-4668-b2de-1bb8666d9495",
               "help": {
                 "text": ""
               },
@@ -122,7 +133,7 @@
       "language": "en-US",
       "results": [
         {
-          "ruleId": "glog-5c950717-f6a5-4439-af5e-c8af1e9b6b2d",
+          "ruleId": "glog-8c63ce2a-3d7c-4e3e-bf7d-9043ca1a26ca",
           "kind": "fail",
           "level": "note",
           "message": {},
@@ -130,86 +141,23 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "include/nlohmann/json.hpp"
+                  "uri": "include/ctranslate2/bfloat16.h"
                 },
                 "region": {
-                  "startLine": 16722,
-                  "startColumn": 13,
-                  "endLine": 16722,
-                  "endColumn": 42,
-                  "charOffset": 619099,
-                  "charLength": 29,
-                  "snippet": {
-                    "text": "memcpy(&result, &x, sizeof(x)",
-                    "rendered": {
-                      "text": "memcpy(&result, &x, sizeof(x)",
-                      "markdown": "`memcpy(&result, &x, sizeof(x)`"
-                    }
-                  },
-                  "sourceLanguage": "cpp"
-                }
-              }
-            }
-          ],
-          "fixes": [
-            {
-              "description": {
-                "text": "There are a number of conditions in which memcpy can introduce a vulnerability (mismatched buffer sizes, null pointers, etc.). More secure alternitives perform additional validation of the source and destination buffer"
-              },
-              "artifactChanges": [
-                {
-                  "artifactLocation": {
-                    "uri": "include/nlohmann/json.hpp"
-                  },
-                  "replacements": [
-                    {
-                      "deletedRegion": {
-                        "charOffset": 619099,
-                        "charLength": 29
-                      },
-                      "insertedContent": {
-                        "text": "memcpy_s(&result, <size of &result>,  &x,  sizeof(x)"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "DevSkimSeverity": "BestPractice",
-            "DevSkimConfidence": "High",
-            "tags": [
-              "API.DangerousAPI.ProblematicFunction"
-            ]
-          }
-        },
-        {
-          "ruleId": "glog-18f679ff-ca63-4b6b-905a-e3ddafa83443",
-          "kind": "fail",
-          "level": "note",
-          "message": {},
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "include/nlohmann/json.hpp"
-                },
-                "region": {
-                  "startLine": 16836,
+                  "startLine": 15,
                   "startColumn": 9,
-                  "endLine": 16836,
-                  "endColumn": 48,
-                  "charOffset": 622695,
-                  "charLength": 39,
+                  "endLine": 15,
+                  "endColumn": 33,
+                  "charOffset": 292,
+                  "charLength": 24,
                   "snippet": {
-                    "text": "memcpy(&target, &source, sizeof(Source)",
+                    "text": "memcpy(&t, &u, sizeof(U)",
                     "rendered": {
-                      "text": "memcpy(&target, &source, sizeof(Source)",
-                      "markdown": "`memcpy(&target, &source, sizeof(Source)`"
+                      "text": "memcpy(&t, &u, sizeof(U)",
+                      "markdown": "`memcpy(&t, &u, sizeof(U)`"
                     }
                   },
-                  "sourceLanguage": "cpp"
+                  "sourceLanguage": "c"
                 }
               }
             }
@@ -222,16 +170,16 @@
               "artifactChanges": [
                 {
                   "artifactLocation": {
-                    "uri": "include/nlohmann/json.hpp"
+                    "uri": "include/ctranslate2/bfloat16.h"
                   },
                   "replacements": [
                     {
                       "deletedRegion": {
-                        "charOffset": 622695,
-                        "charLength": 39
+                        "charOffset": 292,
+                        "charLength": 24
                       },
                       "insertedContent": {
-                        "text": "memcpy_s(&target, <size of &target>,  &source,  sizeof(Source)"
+                        "text": "memcpy_s(&t, <size of &t>,  &u,  sizeof(U)"
                       }
                     }
                   ]
@@ -248,7 +196,7 @@
           }
         },
         {
-          "ruleId": "glog-850f9eea-cc8e-43eb-8931-3c14574d0589",
+          "ruleId": "glog-8ddaed16-3680-4f4f-834a-1a8f24a26991",
           "kind": "fail",
           "level": "note",
           "message": {},
@@ -311,7 +259,7 @@
           }
         },
         {
-          "ruleId": "glog-4463afea-51e9-4a36-8a01-455748ee21ab",
+          "ruleId": "glog-6534de49-40ea-45e6-9680-d72e4ce0c77c",
           "kind": "fail",
           "level": "note",
           "message": {},
@@ -322,17 +270,17 @@
                   "uri": "include/nlohmann/json.hpp"
                 },
                 "region": {
-                  "startLine": 11886,
-                  "startColumn": 13,
-                  "endLine": 11886,
-                  "endColumn": 59,
-                  "charOffset": 448619,
-                  "charLength": 46,
+                  "startLine": 16836,
+                  "startColumn": 9,
+                  "endLine": 16836,
+                  "endColumn": 48,
+                  "charOffset": 622695,
+                  "charLength": 39,
                   "snippet": {
-                    "text": "memcpy(&result, vec.data(), sizeof(NumberType)",
+                    "text": "memcpy(&target, &source, sizeof(Source)",
                     "rendered": {
-                      "text": "memcpy(&result, vec.data(), sizeof(NumberType)",
-                      "markdown": "`memcpy(&result, vec.data(), sizeof(NumberType)`"
+                      "text": "memcpy(&target, &source, sizeof(Source)",
+                      "markdown": "`memcpy(&target, &source, sizeof(Source)`"
                     }
                   },
                   "sourceLanguage": "cpp"
@@ -353,11 +301,11 @@
                   "replacements": [
                     {
                       "deletedRegion": {
-                        "charOffset": 448619,
-                        "charLength": 46
+                        "charOffset": 622695,
+                        "charLength": 39
                       },
                       "insertedContent": {
-                        "text": "memcpy_s(&result, <size of &result>,  vec.data(),  sizeof(NumberType)"
+                        "text": "memcpy_s(&target, <size of &target>,  &source,  sizeof(Source)"
                       }
                     }
                   ]
@@ -374,7 +322,156 @@
           }
         },
         {
-          "ruleId": "glog-dbcfb02d-c681-422d-a2ef-f320ede0a1e7",
+          "ruleId": "glog-db2e2327-3d36-4387-8df2-db6942f98069",
+          "kind": "fail",
+          "level": "note",
+          "message": {},
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "include/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 16722,
+                  "startColumn": 13,
+                  "endLine": 16722,
+                  "endColumn": 42,
+                  "charOffset": 619099,
+                  "charLength": 29,
+                  "snippet": {
+                    "text": "memcpy(&result, &x, sizeof(x)",
+                    "rendered": {
+                      "text": "memcpy(&result, &x, sizeof(x)",
+                      "markdown": "`memcpy(&result, &x, sizeof(x)`"
+                    }
+                  },
+                  "sourceLanguage": "cpp"
+                }
+              }
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "There are a number of conditions in which memcpy can introduce a vulnerability (mismatched buffer sizes, null pointers, etc.). More secure alternitives perform additional validation of the source and destination buffer"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "include/nlohmann/json.hpp"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "charOffset": 619099,
+                        "charLength": 29
+                      },
+                      "insertedContent": {
+                        "text": "memcpy_s(&result, <size of &result>,  &x,  sizeof(x)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "DevSkimSeverity": "BestPractice",
+            "DevSkimConfidence": "High",
+            "tags": [
+              "API.DangerousAPI.ProblematicFunction"
+            ]
+          }
+        },
+        {
+          "ruleId": "glog-3fd4330a-0558-4c67-8f2a-cc65be76eae2",
+          "kind": "fail",
+          "level": "note",
+          "message": {},
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "include/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 6520,
+                  "startColumn": 23,
+                  "endLine": 6520,
+                  "endColumn": 62,
+                  "charOffset": 268599,
+                  "charLength": 39,
+                  "snippet": {
+                    "text": "strlen(reinterpret_cast<const char*>(b)",
+                    "rendered": {
+                      "text": "strlen(reinterpret_cast<const char*>(b)",
+                      "markdown": "`strlen(reinterpret_cast<const char*>(b)`"
+                    }
+                  },
+                  "sourceLanguage": "cpp"
+                }
+              }
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "If a string is missing a null terminator, strlen will read past the end of the buffer"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "include/nlohmann/json.hpp"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "charOffset": 268599,
+                        "charLength": 39
+                      },
+                      "insertedContent": {
+                        "text": "strlen_s(reinterpret_cast<const char*>(b, <size of reinterpret_cast<const char*>(b>)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "description": {
+                "text": "If a string is missing a null terminator, strlen will read past the end of the buffer"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "include/nlohmann/json.hpp"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "charOffset": 268599,
+                        "charLength": 39
+                      },
+                      "insertedContent": {
+                        "text": "strnlen(reinterpret_cast<const char*>(b, <size of reinterpret_cast<const char*>(b>)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "DevSkimSeverity": "BestPractice",
+            "DevSkimConfidence": "High",
+            "tags": [
+              "API.DangerousAPI.ProblematicFunction"
+            ]
+          }
+        },
+        {
+          "ruleId": "glog-4a8d2f16-aa28-49a4-ab59-a29ff912be47",
           "kind": "fail",
           "level": "note",
           "message": {},
@@ -460,7 +557,70 @@
           }
         },
         {
-          "ruleId": "glog-a6de4a95-eab2-4557-b7b1-e61a61ed26be",
+          "ruleId": "glog-1870c8e1-2346-4727-bbb6-fa3d831af7b2",
+          "kind": "fail",
+          "level": "note",
+          "message": {},
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "include/nlohmann/json.hpp"
+                },
+                "region": {
+                  "startLine": 11886,
+                  "startColumn": 13,
+                  "endLine": 11886,
+                  "endColumn": 59,
+                  "charOffset": 448619,
+                  "charLength": 46,
+                  "snippet": {
+                    "text": "memcpy(&result, vec.data(), sizeof(NumberType)",
+                    "rendered": {
+                      "text": "memcpy(&result, vec.data(), sizeof(NumberType)",
+                      "markdown": "`memcpy(&result, vec.data(), sizeof(NumberType)`"
+                    }
+                  },
+                  "sourceLanguage": "cpp"
+                }
+              }
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "There are a number of conditions in which memcpy can introduce a vulnerability (mismatched buffer sizes, null pointers, etc.). More secure alternitives perform additional validation of the source and destination buffer"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "include/nlohmann/json.hpp"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "charOffset": 448619,
+                        "charLength": 46
+                      },
+                      "insertedContent": {
+                        "text": "memcpy_s(&result, <size of &result>,  vec.data(),  sizeof(NumberType)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "DevSkimSeverity": "BestPractice",
+            "DevSkimConfidence": "High",
+            "tags": [
+              "API.DangerousAPI.ProblematicFunction"
+            ]
+          }
+        },
+        {
+          "ruleId": "glog-f627a678-aa62-4db9-9624-9ab0d2da0f41",
           "kind": "fail",
           "level": "note",
           "message": {},
@@ -523,7 +683,70 @@
           }
         },
         {
-          "ruleId": "glog-9f7bbfcc-ee9b-419e-a94f-8a2cb94116fa",
+          "ruleId": "glog-47950733-2b86-4aa6-9928-0dbbf4b0df6e",
+          "kind": "fail",
+          "level": "note",
+          "message": {},
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "include/half_float/half.hpp"
+                },
+                "region": {
+                  "startLine": 918,
+                  "startColumn": 8,
+                  "endLine": 918,
+                  "endColumn": 44,
+                  "charOffset": 35456,
+                  "charLength": 36,
+                  "snippet": {
+                    "text": "memcpy(&fbits, &value, sizeof(float)",
+                    "rendered": {
+                      "text": "memcpy(&fbits, &value, sizeof(float)",
+                      "markdown": "`memcpy(&fbits, &value, sizeof(float)`"
+                    }
+                  },
+                  "sourceLanguage": "cpp"
+                }
+              }
+            }
+          ],
+          "fixes": [
+            {
+              "description": {
+                "text": "There are a number of conditions in which memcpy can introduce a vulnerability (mismatched buffer sizes, null pointers, etc.). More secure alternitives perform additional validation of the source and destination buffer"
+              },
+              "artifactChanges": [
+                {
+                  "artifactLocation": {
+                    "uri": "include/half_float/half.hpp"
+                  },
+                  "replacements": [
+                    {
+                      "deletedRegion": {
+                        "charOffset": 35456,
+                        "charLength": 36
+                      },
+                      "insertedContent": {
+                        "text": "memcpy_s(&fbits, <size of &fbits>,  &value,  sizeof(float)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "properties": {
+            "DevSkimSeverity": "BestPractice",
+            "DevSkimConfidence": "High",
+            "tags": [
+              "API.DangerousAPI.ProblematicFunction"
+            ]
+          }
+        },
+        {
+          "ruleId": "glog-f1e244a7-93a9-456b-b119-9ed859d79777",
           "kind": "fail",
           "level": "note",
           "message": {},
@@ -586,7 +809,7 @@
           }
         },
         {
-          "ruleId": "glog-2db1852e-3386-4620-8973-4a70baf3da17",
+          "ruleId": "glog-e5645369-0346-4668-b2de-1bb8666d9495",
           "kind": "fail",
           "level": "note",
           "message": {},
@@ -633,69 +856,6 @@
                       },
                       "insertedContent": {
                         "text": "memcpy_s(&dbits, <size of &dbits>,  &value,  sizeof(double)"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
-          "properties": {
-            "DevSkimSeverity": "BestPractice",
-            "DevSkimConfidence": "High",
-            "tags": [
-              "API.DangerousAPI.ProblematicFunction"
-            ]
-          }
-        },
-        {
-          "ruleId": "glog-c54000e1-149f-45f9-a2c0-73a1e8c7bcdb",
-          "kind": "fail",
-          "level": "note",
-          "message": {},
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "include/half_float/half.hpp"
-                },
-                "region": {
-                  "startLine": 918,
-                  "startColumn": 8,
-                  "endLine": 918,
-                  "endColumn": 44,
-                  "charOffset": 35456,
-                  "charLength": 36,
-                  "snippet": {
-                    "text": "memcpy(&fbits, &value, sizeof(float)",
-                    "rendered": {
-                      "text": "memcpy(&fbits, &value, sizeof(float)",
-                      "markdown": "`memcpy(&fbits, &value, sizeof(float)`"
-                    }
-                  },
-                  "sourceLanguage": "cpp"
-                }
-              }
-            }
-          ],
-          "fixes": [
-            {
-              "description": {
-                "text": "There are a number of conditions in which memcpy can introduce a vulnerability (mismatched buffer sizes, null pointers, etc.). More secure alternitives perform additional validation of the source and destination buffer"
-              },
-              "artifactChanges": [
-                {
-                  "artifactLocation": {
-                    "uri": "include/half_float/half.hpp"
-                  },
-                  "replacements": [
-                    {
-                      "deletedRegion": {
-                        "charOffset": 35456,
-                        "charLength": 36
-                      },
-                      "insertedContent": {
-                        "text": "memcpy_s(&fbits, <size of &fbits>,  &value,  sizeof(float)"
                       }
                     }
                   ]
